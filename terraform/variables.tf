@@ -1,14 +1,7 @@
-variable "aws_secret_key" {
-   default = "XXXXXXXXXXXw1lDCXXXXXXXXXXXXXXXXXXX"
-}
-
 variable "Instance_type" {}
 
 variable "ami" {
    default = "ami-1e749f67"
-}
-variable "aws_access_key" {
-   default = "AKIXXXXXXXXXXXX"
 }
 
 variable "amis" {
