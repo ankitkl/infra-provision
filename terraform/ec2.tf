@@ -12,6 +12,7 @@ resource "aws_instance" "web1" {
   associate_public_ip_address = true
   key_name = "${aws_key_pair.deployer.key_name}"
   subnet_id = "${aws_subnet.eu-west-1a-public.id}" 
+   security_groups = ["${aws_security_group.allow_all.id}"]
   tags {
     Name = "Nginx1"
   }
@@ -22,6 +23,7 @@ resource "aws_instance" "web2" {
   instance_type = "t2.micro"
   key_name = "${aws_key_pair.deployer.key_name}"
   subnet_id = "${aws_subnet.eu-west-1b-private.id}"
+  security_groups = ["${aws_security_group.allow_all.id}"]
 
   tags {
     Name = "Nginx2"
@@ -33,6 +35,7 @@ resource "aws_instance" "web3" {
   ami           = "${var.ami}"
   instance_type = "t2.micro"
   key_name = "${aws_key_pair.deployer.key_name}"
+   security_groups = ["${aws_security_group.allow_all.id}"]
   subnet_id = "${aws_subnet.eu-west-1c-private.id}"
   tags {
     Name = "Nginx3"
