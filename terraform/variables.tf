@@ -32,3 +32,7 @@ variable "private_subnet_cidr2" {
     description = "CIDR for the Private Subnet2"
     default = "10.0.2.0/24"
 }
+variable "aws_secret_key" {}
+
+variable "aws_access_key" {}
+
