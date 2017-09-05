@@ -3,7 +3,7 @@ Key_creation
 */
 resource "aws_key_pair" "deployer" {
   key_name   = "ec2-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 tfs@example.com"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHmW9HaaSGba+lroXeDLn5Xdpv3EvH5eirbBBroATeYnewAHwI98XkeSFpj6cnV6Fkx0rAamh+R/S8BWKvJUvcFPqV8R62UynWST22meQMJA06/A59Hk9Qlx5Cp+UIl1JX7TzqvVTzLc1gg8PTbnj4baYSjK64aJ59Iz2/x+VpoIJx1Dbb3djZkPBng6CXluNhFSSNC4sZp1gy+MeWNWljhRZGU2VLHolRZUImo6lPNoqtPIFjRnvH4TwGToS/O5u3ESQHodMHLxDgO/WNoPc9eZmWEpDwX92HBecO7JAn+Up8zTfbBDS9r0WhVoTw61R+m+PahqwFbsxZhKJPGNq5 root@localhost.localdomain"
 }
 resource "aws_instance" "web1" {
   ami           = "${var.ami}"
