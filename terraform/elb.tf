@@ -23,7 +23,7 @@ resource "aws_elb" "bar" {
   idle_timeout                = 400
   connection_draining         = true
   connection_draining_timeout = 400
-
+  security_groups = ["${aws_security_group.allow_all.id}"]
   tags {
     Name = "foobar-terraform-elb"
   }

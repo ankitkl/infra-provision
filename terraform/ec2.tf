@@ -24,7 +24,6 @@ resource "aws_instance" "web2" {
   key_name = "${aws_key_pair.deployer.key_name}"
   subnet_id = "${aws_subnet.eu-west-1b-private.id}"
   security_groups = ["${aws_security_group.allow_all.id}"]
-
   tags {
     Name = "Nginx2"
   }
