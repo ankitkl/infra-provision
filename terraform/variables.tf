@@ -1,15 +1,15 @@
 variable "Instance_type" {}
 
 variable "ami" {
-   default = "ami-1e749f67"
+   default = "ami-8a4286f3"
 }
 
 variable "amis" {
     description = "AMIs by region"
     default = {
-        eu-west-1a = "ami-1e749f67" # ubuntu 14.04 LTS
-	eu-west-1b = "ami-1e749f67"
-	eu-west-1c = "ami-1e749f67"
+        eu-west-1a = "ami-8a4286f3" # ubuntu 14.04 LTS
+	eu-west-1b = "ami-8a4286f3"
+	eu-west-1c = "ami-8a4286f3"
     }
 }
 
